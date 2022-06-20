@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-19T11:20:57-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2022/06/19/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-06-19T11:08:34-04:00</published><updated>2022-06-19T11:08:34-04:00</updated><id>http://localhost:4000/jekyll/update/2022/06/19/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/06/19/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-20T12:11:31+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongle的博客</title><subtitle>互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2022/06/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-06-20T08:59:12+08:00</published><updated>2022-06-20T08:59:12+08:00</updated><id>http://localhost:4000/jekyll/update/2022/06/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/06/20/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
@@ -14,4 +14,33 @@
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">关于个人的一些说明</title><link href="http://localhost:4000/jekyll/2022/06/20/firstpage.html" rel="alternate" type="text/html" title="关于个人的一些说明" /><published>2022-06-20T08:30:00+08:00</published><updated>2022-06-20T08:30:00+08:00</updated><id>http://localhost:4000/jekyll/2022/06/20/firstpage</id><content type="html" xml:base="http://localhost:4000/jekyll/2022/06/20/firstpage.html"><![CDATA[<h3 id="1-关于个人">1 关于个人</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>双非一本的非科班学生
+
+毕业之后进了一家工地，在工地顶着40℃的太阳晒了三个月，搬砖的快乐只有搬砖人才懂。
+三个月后已经黑了好几个度，想想工地呆着没啥前途，就趁着主管跑路的时候，我也按捺不住就投进了互联网的大坑。
+
+之后在一家小公司做开发，数了数除了老板，只剩下三个人的小公司。好的是技术可以突飞猛进，恶心的是你必须是全栈工程师，外到html,js，内到spring，mp，大周末的给你拉过来加班。后来顶不住，去做了安服崽。
+
+安服崽的日子是真快乐，没有工地的大太阳，没有加班的痛苦(偶尔加班)，一个Log4j养活了一个安全圈真不是吹的。平时的日子就是上上设备，调调路由，对着设备看看告警，经验是越来越多，对于Web攻击研判是越来越熟练。
+
+闲暇之后，偶尔挖挖洞，搞过CNVD，搞过SRC，搞过CVE，发现技术就停留在那里，和自己的想的快速成长相差甚远。特此向二进制
+进军，小目标就是挖一个影响范围较大的二进制漏洞吧。
+</code></pre></div></div>
+
+<h3 id="2-关于学习">2 关于学习</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>跟着B站学过很多技术，比如PE，汇编等，没有做过项目的技术都是不成熟的技术，希望这个博客能够让我认认真真踏踏实实去研究二进制漏洞。
+</code></pre></div></div>
+
+<h3 id="3-关于理想">3 关于理想</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>挖掘影响范围较大的二进制漏洞
+</code></pre></div></div>
+
+<div align="right">
+ps:还有别指望能挖这个站的漏洞，因为这是个静态网站，数据库都没有
+<p>
+<p>
+dongle 于2022-6-20日&lt;/div&gt;
+
+</p></p></div>]]></content><author><name></name></author><category term="jekyll" /><summary type="html"><![CDATA[1 关于个人 ``` 双非一本的非科班学生]]></summary></entry></feed>
