@@ -2,7 +2,7 @@
 layout: post
 title: 关于个人的一些说明
 date: 2022-06-20 8:30
-categories: jekyll
+categories: main
 ---
 
 ### 1 关于个人
