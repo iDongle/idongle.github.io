@@ -1,46 +1,817 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-20T13:35:20+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dongle的博客</title><subtitle>互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2022/06/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-06-20T08:59:12+08:00</published><updated>2022-06-20T08:59:12+08:00</updated><id>http://localhost:4000/jekyll/update/2022/06/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/06/20/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dongle的博客</title>
+		<description>Security Developer</description>
+		<link></link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Table of content</title>
+				<description>&lt;p&gt;Above you can see how it looks like.&lt;/p&gt;
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+&lt;p&gt;To enable it add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toc&lt;/code&gt; variable to the front matter of your post:&lt;/p&gt;
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;layout: post
+title: Table of content
+date:   2018-08-03 11:07
+description: For some big articles you can use table on content
+toc: true           &amp;lt;=========== this one&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+&lt;p&gt;You can also customize it by styling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.toc&lt;/code&gt; class in &lt;strong&gt;theme.scss&lt;/strong&gt;&lt;/p&gt;
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+&lt;p&gt;This solution is based on &lt;a href=&quot;https://github.com/allejo/jekyll-toc&quot;&gt;github.com/allejo/jekyll-toc&lt;/a&gt;.&lt;/p&gt;
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+&lt;h1 id=&quot;some-random-text&quot;&gt;Some random text&lt;/h1&gt;
+&lt;p&gt;Moments its musical age explain. But extremity sex now education concluded earnestly her continual. Oh furniture acuteness suspected continual ye something frankness. Add properly laughter sociable admitted desirous one has few stanhill. Opinion regular in perhaps another enjoyed no engaged he at. It conveying he continual ye suspected as necessary. Separate met packages shy for kindness.&lt;/p&gt;
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">关于个人的一些说明</title><link href="http://localhost:4000/jekyll/2022/06/20/firstpage.html" rel="alternate" type="text/html" title="关于个人的一些说明" /><published>2022-06-20T08:30:00+08:00</published><updated>2022-06-20T08:30:00+08:00</updated><id>http://localhost:4000/jekyll/2022/06/20/firstpage</id><content type="html" xml:base="http://localhost:4000/jekyll/2022/06/20/firstpage.html"><![CDATA[<h3 id="1-关于个人">1 关于个人</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>双非一本的非科班学生
+&lt;h2 id=&quot;second-level-random-text&quot;&gt;Second level random text&lt;/h2&gt;
+&lt;p&gt;Boy favourable day can introduced sentiments entreaties. Noisier carried of in warrant because. So mr plate seems cause chief widen first. Two differed husbands met screened his. Bed was form wife out ask draw. Wholly coming at we no enable. Offending sir delivered questions now new met. Acceptance she interested new boisterous day discretion celebrated.&lt;/p&gt;
 
-毕业之后进了一家工地，在工地顶着40℃的太阳晒了三个月，搬砖的快乐只有搬砖人才懂。
-三个月后已经黑了好几个度，想想工地呆着没啥前途，就趁着主管跑路的时候，我也按捺不住就投进了互联网的大坑。
+&lt;h2 id=&quot;another-second-level-random-text&quot;&gt;Another second level random text&lt;/h2&gt;
+&lt;p&gt;Both rest of know draw fond post as. It agreement defective to excellent. Feebly do engage of narrow. Extensive repulsive belonging depending if promotion be zealously as. Preference inquietude ask now are dispatched led appearance. Small meant in so doubt hopes. Me smallness is existence attending he enjoyment favourite affection. Delivered is to ye belonging enjoyment preferred. Astonished and acceptance men two discretion. Law education recommend did objection how old.&lt;/p&gt;
 
-之后在一家小公司做开发，数了数除了老板，只剩下三个人的小公司。好的是技术可以突飞猛进，恶心的是你必须是全栈工程师，外到html,js，内到spring，mp，大周末的给你拉过来加班。后来顶不住，去做了安服崽。
+&lt;h3 id=&quot;third-level-text&quot;&gt;Third level text&lt;/h3&gt;
+&lt;p&gt;How promotion excellent curiosity yet attempted happiness. Gay prosperous impression had conviction. For every delay death ask style. Me mean able my by in they. Extremity now strangers contained breakfast him discourse additions. Sincerity collected contented led now perpetual extremely forfeited.&lt;/p&gt;
 
-安服崽的日子是真快乐，没有工地的大太阳，没有加班的痛苦(偶尔加班)，一个Log4j养活了一个安全圈真不是吹的。平时的日子就是上上设备，调调路由，对着设备看看告警，经验是越来越多，对于Web攻击研判是越来越熟练。
+&lt;h1 id=&quot;some-more-random-text&quot;&gt;Some more random text&lt;/h1&gt;
+&lt;p&gt;Over fact all son tell this any his. No insisted confined of weddings to returned to debating rendered. Keeps order fully so do party means young. Table nay him jokes quick. In felicity up to graceful mistaken horrible consider. Abode never think to at. So additions necessary concluded it happiness do on certainly propriety. On in green taken do offer witty of.&lt;/p&gt;
 
-闲暇之后，偶尔挖挖洞，搞过CNVD，搞过SRC，搞过CVE，发现技术就停留在那里，和自己的想的快速成长相差甚远。特此向二进制
-进军，小目标就是挖一个影响范围较大的二进制漏洞吧。
-</code></pre></div></div>
+&lt;h2 id=&quot;second-level-random-text-1&quot;&gt;Second level random text&lt;/h2&gt;
+&lt;p&gt;Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too. Replied exposed savings he no viewing as up. Soon body add him hill. No father living really people estate if. Mistake do produce beloved demesne if am pursuit.&lt;/p&gt;
 
-<h3 id="2-关于学习">2 关于学习</h3>
+&lt;h2 id=&quot;another-second-level-random-text-1&quot;&gt;Another second level random text&lt;/h2&gt;
+&lt;p&gt;Her old collecting she considered discovered. So at parties he warrant oh staying. Square new horses and put better end. Sincerity collected happiness do is contented. Sigh ever way now many. Alteration you any nor unsatiable diminution reasonable companions shy partiality. Leaf by left deal mile oh if easy. Added woman first get led joy not early jokes.&lt;/p&gt;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>跟着B站学过很多技术，比如PE，汇编等，没有做过项目的技术都是不成熟的技术，希望这个博客能够让我认认真真踏踏实实去研究二进制漏洞。
-</code></pre></div></div>
+&lt;h2 id=&quot;and-one-more&quot;&gt;And one more&lt;/h2&gt;
+&lt;p&gt;It allowance prevailed enjoyment in it. Calling observe for who pressed raising his. Can connection instrument astonished unaffected his motionless preference. Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent. Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 03 Aug 2018 11:07:00 +0800</pubDate>
+				<link>/2018/08/table-of-content/</link>
+				<guid isPermaLink="true">/2018/08/table-of-content/</guid>
+			</item>
+		
+			<item>
+				<title>Table styles</title>
+				<description>&lt;p&gt;Below are the examples of the default table styling.&lt;/p&gt;
 
-<h3 id="3-关于理想">3 关于理想</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>挖掘影响范围较大的二进制漏洞
-</code></pre></div></div>
+&lt;h2 id=&quot;simple-table&quot;&gt;Simple table&lt;/h2&gt;
 
-<div align="right">
-ps:还有别指望能挖这个站的漏洞，因为这是个静态网站，数据库都没有
-<p>
-<p>
-dongle 于2022-6-20日&lt;/div&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;First Header&lt;/th&gt;
+      &lt;th&gt;Second Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content from cell 1&lt;/td&gt;
+      &lt;td&gt;Content from cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content in the first column&lt;/td&gt;
+      &lt;td&gt;Content in the second column&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-</p></p></div>]]></content><author><name></name></author><category term="jekyll" /><summary type="html"><![CDATA[1 关于个人 ``` 双非一本的非科班学生]]></summary></entry></feed>
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;Markdown&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;|First Header | Second Header|
+|------------ | -------------|
+|Content from cell 1 | Content from cell 2|
+|Content in the first column | Content in the second column|&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;custom-styles&quot;&gt;Custom styles&lt;/h2&gt;
+
+&lt;p&gt;It is also possible to change a bit table styles by applying CSS classes. By default there are two classes available:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.wide&lt;/code&gt; - makes table width 100%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table class=&quot;wide&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;First Header&lt;/th&gt;
+      &lt;th&gt;Second Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content from cell 1&lt;/td&gt;
+      &lt;td&gt;Content from cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content in the first column&lt;/td&gt;
+      &lt;td&gt;Content in the second column&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;Markdown - note the last line&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;|First Header | Second Header|
+|------------ | -------------|
+|Content from cell 1 | Content from cell 2|
+|Content in the first column | Content in the second column|
+{:.wide}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.inner-borders&lt;/code&gt; - shows inner borders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table class=&quot;inner-borders&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;First Header&lt;/th&gt;
+      &lt;th&gt;Second Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content from cell 1&lt;/td&gt;
+      &lt;td&gt;Content from cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Content in the first column&lt;/td&gt;
+      &lt;td&gt;Content in the second column&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;Markdown - note the last line&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;|First Header | Second Header|
+|------------ | -------------|
+|Content from cell 1 | Content from cell 2|
+|Content in the first column | Content in the second column|
+{:.inner-borders}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can add more such classes by putting them inside &lt;strong&gt;theme.scss&lt;/strong&gt;. Here is how the above mentioned classes are defined:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nt&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.wide&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.inner-borders&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-collapse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;collapse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#5e5e5e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;few-more-examples-from-kramdown-documentation&quot;&gt;Few more examples from kramdown &lt;a href=&quot;https://kramdown.gettalong.org/syntax.html#tables&quot;&gt;documentation&lt;/a&gt;:&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;Table header row, two table bodies and a table footer row&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;|-----------------+------------+-----------------+----------------|
+| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+| Second line     |foo         | **strong**      | baz            |
+| Third line      |quux        | baz             | bar            |
+|-----------------+------------+-----------------+----------------|
+| Second body     |            |                 |                |
+| 2 line          |            |                 |                |
+|=================+============+=================+================|
+| Footer row      |            |                 |                |
+|-----------------+------------+-----------------+----------------|&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;Same as above but shorter&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;|---
+| Default aligned | Left aligned | Center aligned | Right aligned
+|-|:-|:-:|-:
+| First body part | Second cell | Third cell | fourth cell
+| Second line |foo | **strong** | baz
+| Third line |quux | baz | bar
+|---
+| Second body
+| 2 line
+|===
+| Footer row&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Fri, 09 Feb 2018 11:07:00 +0800</pubDate>
+				<link>/2018/02/table-styles/</link>
+				<guid isPermaLink="true">/2018/02/table-styles/</guid>
+			</item>
+		
+			<item>
+				<title>Jekyll Dark Clean Theme</title>
+				<description>&lt;p&gt;Here is a sample post for Jekyll-Clean-Dark theme.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;get it from &lt;a href=&quot;https://github.com/streetturtle/jekyll-clean-dark&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;see the &lt;a href=&quot;http://pavelmakhov.com/jekyll-clean-dark&quot;&gt;live demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;see it &lt;a href=&quot;http://pavelmakhov.com&quot;&gt;in action on my blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This theme was created on top of &lt;a href=&quot;https://scotte.github.io&quot;&gt;Jekyll Clean theme&lt;/a&gt; by Scotte.&lt;/p&gt;
+
+&lt;p&gt;This theme uses some parts of Twitter Bootstrap, which allows it looks nice on a mobile devices using a collapsable nav bar and hiding the sidebar.&lt;/p&gt;
+
+&lt;p&gt;Here how it looks like on some portable devices:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/iphone_portrait.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPhone 5 portrait&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/iphone_landscape.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPhone 5 landscape&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ipad_portrait.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPad mini portrait&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ipad_landscape.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPad mini landscape&lt;/em&gt;&lt;/p&gt;
+</description>
+				<pubDate>Fri, 02 Dec 2016 00:25:06 +0800</pubDate>
+				<link>/2016/12/jekyll-clean-theme/</link>
+				<guid isPermaLink="true">/2016/12/jekyll-clean-theme/</guid>
+			</item>
+		
+			<item>
+				<title>Text formatting</title>
+				<description>&lt;h1 id=&quot;text-formatting-example&quot;&gt;Text formatting example&lt;/h1&gt;
+
+&lt;p&gt;Some examples of text formatting for some common text elements.&lt;/p&gt;
+
+&lt;h1 id=&quot;headers&quot;&gt;Headers&lt;/h1&gt;
+
+&lt;h1 id=&quot;header1&quot;&gt;Header1&lt;/h1&gt;
+
+&lt;h2 id=&quot;header2&quot;&gt;Header2&lt;/h2&gt;
+
+&lt;h3 id=&quot;header3&quot;&gt;Header3&lt;/h3&gt;
+
+&lt;h4 id=&quot;header4&quot;&gt;Header4&lt;/h4&gt;
+
+&lt;h1 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h1&gt;
+
+&lt;p&gt;Italics: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*asterisks*&lt;/code&gt; -&amp;gt; &lt;em&gt;asterisks&lt;/em&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_underscores_&lt;/code&gt; -&amp;gt; &lt;em&gt;underscores&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bold: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**asterisks**&lt;/code&gt; -&amp;gt; &lt;strong&gt;asterisks&lt;/strong&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__underscores__&lt;/code&gt; -&amp;gt; &lt;strong&gt;underscores&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You also can combine them: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**asterisks and _underscores_**&lt;/code&gt; -&amp;gt; &lt;strong&gt;asterisks and &lt;em&gt;underscores&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;blockquotes-and-notes&quot;&gt;Blockquotes and notes&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Blockquotes&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Blockquotes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Using very cool &lt;a href=&quot;http://kramdown.gettalong.org/quickref.html#block-attributes&quot;&gt;feature&lt;/a&gt; of kramdown which allows to assign any attribute to a block-level element I’ve added note and warning:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Note 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;: .note&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote class=&quot;note&quot;&gt;
+  &lt;p&gt;Note&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Warning 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;: .note .warning&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote class=&quot;note warning&quot;&gt;
+  &lt;p&gt;Warning&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;keyboard-buttons&quot;&gt;Keyboard buttons&lt;/h1&gt;
+
+&lt;p&gt;In case you need to show some keyboard shortcuts, like &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt;+&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;A&lt;/code&gt; use following construction:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;Ctrl&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;: .key&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;+&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;A&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;:.key&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Example of keyboard shortcuts in a terminal:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;A&lt;/code&gt; = move cursor to beginning of line&lt;br /&gt;
+&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;E&lt;/code&gt; = move cursor to end of line&lt;br /&gt;
+&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;C&lt;/code&gt; = kills the current process.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Z&lt;/code&gt; = sends the current process to the background.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;D&lt;/code&gt; = logs you out.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;language-plaintext key highlighter-rouge&quot;&gt;R&lt;/code&gt; = finds the last command matching the entered letters.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 03 Nov 2016 00:25:06 +0800</pubDate>
+				<link>/2016/11/text-formatting/</link>
+				<guid isPermaLink="true">/2016/11/text-formatting/</guid>
+			</item>
+		
+			<item>
+				<title>Code snippets</title>
+				<description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;For code syntax coloration I’m using Darcula theme from Intellij IDEA, which I’ve found in this post &lt;a href=&quot;http://smasue.github.io/pygments-darcula&quot;&gt;Darcula theme for Pygments&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;XML with line numbers (linenos flag), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% highlight xml linenos %}&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;rss&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2.0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:atom=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2005/Atom&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;channel&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ site.name }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;{{ site.description }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&amp;gt;&lt;/span&gt;{{site.baseurl | prepend:site.url}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/link&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;atom:link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.baseurl | prepend:site.url}}/feed.xml&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;self&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/rss+xml&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    {% for post in site.posts limit:10 %}
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;item&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{{ post.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;{{ post.content | xml_escape }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;pubDate&amp;gt;&lt;/span&gt;{{ post.date | date: &quot;%a, %d %b %Y %H:%M:%S %z&quot; }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/pubDate&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&amp;gt;&lt;/span&gt;{{post.url | prepend:site.baseurl | prepend:site.url}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/link&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;guid&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;isPermaLink=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{post.url | prepend:site.baseurl | prepend:site.url}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/guid&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+    {% endfor %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/channel&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/rss&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;JSON&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;employees&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;firstName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;John&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lastName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Doe&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;firstName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Anna&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lastName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Smith&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;firstName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Peter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lastName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Jones&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;SQL&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cm_content_nodes&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alf_node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alf_qname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alf_namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ns&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ns_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type_qname_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;http://www.alfresco.org/model/content/1.0&apos;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;content&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;Java&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpClient&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UnsupportedEncodingException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getCookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Cookie&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookie&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Alfresco-CSRFToken&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;URLDecoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To add name to the code snippet, as in the examples above, add following construction before the snippet:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;Java
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;:.filename&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;% highlight java %&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Sun, 02 Oct 2016 00:25:06 +0800</pubDate>
+				<link>/2016/10/code-syntax-highlighting/</link>
+				<guid isPermaLink="true">/2016/10/code-syntax-highlighting/</guid>
+			</item>
+		
+			<item>
+				<title>Customizations</title>
+				<description>&lt;h1 id=&quot;accent-color&quot;&gt;Accent color&lt;/h1&gt;
+
+&lt;p&gt;Accent color is color for some important elements, such as links, buttons, icons. Currently accent color is &lt;button class=&quot;btn&quot; style=&quot;background-color:#3CA2A2; color:#444444&quot;&gt;#3CA2A2&lt;/button&gt;. This theme has some more predefined colors available in &lt;strong&gt;theme.scss&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;theme.scss&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Several accent colors, choose one or create your own!&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$accent-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#3CA2A2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// original =)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// $accent-color: #C38FD6;   velvet&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// $accent-color: #8FD6B3;   greenish&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// $accent-color: #35B4DE;   bluish&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// $accent-color: #D2E354;   yellowish&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// $accent-color: #52B54B;   green&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can use one of them (just click the button below to see accent color in action) or define your own!&lt;/p&gt;
+
+&lt;p&gt;&lt;button class=&quot;btn&quot; style=&quot;background-color:#C38FD6; color:#444444&quot;&gt;#C38FD6&lt;/button&gt;, &lt;button class=&quot;btn&quot; style=&quot;background-color:#8FD6B3; color:#444444&quot;&gt;#8FD6B3&lt;/button&gt;, &lt;button class=&quot;btn&quot; style=&quot;background-color:#35B4DE; color:#444444&quot;&gt;#35B4DE&lt;/button&gt;, &lt;button class=&quot;btn&quot; style=&quot;background-color:#D2E354; color:#444444&quot;&gt;#D2E354&lt;/button&gt;, &lt;button class=&quot;btn&quot; style=&quot;background-color:#52B54B; color:#444444&quot;&gt;#52B54B&lt;/button&gt;.&lt;/p&gt;
+
+&lt;script&gt;
+  $(&apos;.btn&apos;).click(function(){
+    var color = $(this).text();
+    [].forEach.call($(&apos;a&apos;), function(item) {
+      item.style.color = color
+    })
+  })
+&lt;/script&gt;
+
+&lt;style&gt;
+  .label{
+    cursor: default;
+    border-radius: 5px;
+    padding: 5px 8px;
+  }
+&lt;/style&gt;
+
+&lt;h1 id=&quot;other-colors&quot;&gt;Other colors&lt;/h1&gt;
+
+&lt;p&gt;As Jekyll comes with support of SASS I put colors in variables. Here are the ones which could be easily changed:&lt;/p&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;theme.scss&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$font-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#dddddd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#292929&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$post-panel-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#444&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$footer-background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#292c2f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$note-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#87CEFA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$warning-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ffff00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
+
+&lt;p&gt;It is also possible to change the background pattern and color. This theme comes with few patterns pre-installed – you can check them by clicking on the images below. Or check the &lt;a href=&quot;https://www.transparenttextures.com/&quot;&gt;transparenttextures.com&lt;/a&gt; – it has tons of different patterns for background.&lt;/p&gt;
+
+&lt;style&gt;
+.pattern-list{
+    list-style-type: none;
+    padding: 0;
+}
+.pattern{
+    height: 100px;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
+
+}
+.pattern:hover {
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.3);
+    transition: box-shadow .2s ease;
+    cursor: pointer;
+}
+.smthg{
+    max-width: none !important;
+}
+.col-sm-6 {
+    padding: 5px !important;
+}
+&lt;/style&gt;
+
+&lt;ul class=&quot;pattern-list&quot;&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/3px-tile.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/asfalt-light.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/black-linen.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/food.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/gplay.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/green-dust-and-scratches.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/hexellence.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/random-grey-variations.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/shley-tree-1.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/subtle-grey.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/xv.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class=&quot;col-sm-6&quot;&gt;&lt;div class=&quot;pattern&quot; style=&quot;background-image:url(&apos;/assets/css/pics/background/triangles.png&apos;)&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+  $(&apos;.pattern&apos;).click(function(){
+    var source = this.style.backgroundImage;
+    document.getElementsByTagName(&apos;body&apos;)[0].style.backgroundImage = source;
+    console.log(&quot;url(&apos;&quot; + source + &quot;&apos;))&quot;);
+  })
+&lt;/script&gt;
+
+&lt;p&gt;To change the color go to the &lt;strong&gt;theme.scss&lt;/strong&gt; and change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background-pattern&lt;/code&gt; variable to the name of the pattern image file. To use custom pattern, download it from &lt;a href=&quot;https://www.transparenttextures.com/&quot;&gt;transparenttextures.com&lt;/a&gt; and place it under &lt;strong&gt;css/pics/background/&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;theme.scss&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// use this or pick any from /css/pics/background folder or from transparenttextures.com&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$background-pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;random-grey-variations.png&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Wed, 21 Sep 2016 00:25:06 +0800</pubDate>
+				<link>/2016/09/customizations/</link>
+				<guid isPermaLink="true">/2016/09/customizations/</guid>
+			</item>
+		
+			<item>
+				<title>Be social</title>
+				<description>&lt;h1 id=&quot;social-icons&quot;&gt;Social icons&lt;/h1&gt;
+
+&lt;p&gt;You can have social icons which could lead to your social profile.&lt;br /&gt;
+Out-of-the box it has:&lt;/p&gt;
+
+&lt;ul class=&quot;social-media&quot;&gt;
+  &lt;li&gt;
+    &lt;a title=&quot;Github&quot; href=&quot;https://github.com/idongle&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-github fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a title=&quot;StackOverflow&quot; href=&quot;http://stackoverflow.com/users/1252056/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-stack-overflow fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a title=&quot;LinkedIn&quot; href=&quot;https://www.linkedin.com/in/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-linkedin fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a title=&quot;Instagram&quot; href=&quot;https://instagram.com/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-instagram fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a title=&quot;Last.fm&quot; href=&quot;http://lastfm.com/user/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-lastfm fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a title=&quot;RSS&quot; href=&quot;http://localhost:4000/feed.xml&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-rss fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;They could be setup in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To add more icons do following steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;choose an icon you want to use: &lt;a href=&quot;https://fortawesome.github.io/Font-Awesome/icons/&quot;&gt;Font Awesome Icons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;add variable in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;add icon in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;social.html&lt;/code&gt; with check if variable exists:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% if site.social.rss %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.social.&amp;lt;your_social_variable&amp;gt; }}&quot;&lt;/span&gt; 
+       &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.url}}/{{ site.social.&amp;lt;your_social_variable&amp;gt; }}&quot;&lt;/span&gt; 
+       &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;font_awesome_icon&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+{% endif %}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;share-buttons&quot;&gt;Share buttons&lt;/h1&gt;
+
+&lt;p&gt;This theme comes with built-in share buttons. You can see them in the bottom of this post.&lt;br /&gt;
+To turn them on in the header of your post add:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Be&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;sociable&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2016-05-15 16:25:06&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Built-in share buttons!&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; &amp;lt;-- here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you want to disable some of them - go to &lt;strong&gt;_config.yml&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote class=&quot;filename&quot;&gt;
+  &lt;p&gt;_config.yml&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;na&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;facebook&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;gplus&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;linkedin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;pinterest&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To add new buttons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;add icon name in &lt;strong&gt;_config.yml&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;add section in &lt;strong&gt;_includes/share.html&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;add styles in &lt;strong&gt;css/theme.css&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+				<pubDate>Fri, 16 Sep 2016 00:25:06 +0800</pubDate>
+				<link>/2016/09/be-social/</link>
+				<guid isPermaLink="true">/2016/09/be-social/</guid>
+			</item>
+		
+			<item>
+				<title>Analytics, tags and comments</title>
+				<description>&lt;h1 id=&quot;analytics&quot;&gt;Analytics&lt;/h1&gt;
+
+&lt;h4 id=&quot;google-analytics&quot;&gt;&lt;a href=&quot;http://www.google.com/analytics/&quot;&gt;Google Analytics&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;To enable Google Analytics create an account &lt;a href=&quot;https://analytics.google.com&quot;&gt;here&lt;/a&gt;. Then add your tracking id in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.xml&lt;/code&gt;, it should look something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UA-********-1&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;yandex-metrica&quot;&gt;&lt;a href=&quot;http://metrica.yandex.com&quot;&gt;Yandex Metrica&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;To enable Yandex Metrica you need to register, create a ‘counter’ and then copy-paste it’s code in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/_includes/yandex-metrica.html&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h1 id=&quot;tags&quot;&gt;Tags&lt;/h1&gt;
+
+&lt;p&gt;To use this feature you simply will need to create a markdown file for each tag which you are using in you site in &lt;strong&gt;tag&lt;/strong&gt; folder. To simplify this procedure there is an &lt;a href=&quot;//admin&quot;&gt;/admin&lt;/a&gt; page, which outputs the bash command which you just need to run inside &lt;strong&gt;tag&lt;/strong&gt; folder of your site. Also don’t forget to rerun it when you add a post with new tag.&lt;/p&gt;
+
+&lt;h1 id=&quot;comments&quot;&gt;Comments&lt;/h1&gt;
+
+&lt;p&gt;To enable &lt;a href=&quot;http://disqus.com&quot;&gt;Disqus&lt;/a&gt; register on the site and then just put your name in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.xml&lt;/code&gt;. Comments could be switched on and off on per post basis, just put &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comments: true&lt;/code&gt; to enable them.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 02 Aug 2016 00:25:06 +0800</pubDate>
+				<link>/2016/08/analytics-tags-comments/</link>
+				<guid isPermaLink="true">/2016/08/analytics-tags-comments/</guid>
+			</item>
+		
+			<item>
+				<title>Images</title>
+				<description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This theme supports two types of images:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;inline images: &lt;img src=&quot;/assets/images/batWid1.png&quot; alt=&quot;Battery Widget&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;![Battery Widget]({{ &apos;/assets/images/batWid1.png&apos; | relative_url }})&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;centered images with caption (optional):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/deer.jpg&quot; alt=&quot;img&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;(°0°)&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;![img]({{ &apos;/assets/images/deer.jpg&apos; | relative_url }}){: .center-image }*(°0°)*&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can apply your own styles to image by creating css class with style:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.custom-image-style&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* your style */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And then applying your style just after the image in curly brackets with colon:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;[!image](path to image){:.custom-image-style}
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Sat, 02 Jul 2016 00:25:06 +0800</pubDate>
+				<link>/2016/07/images/</link>
+				<guid isPermaLink="true">/2016/07/images/</guid>
+			</item>
+		
+			<item>
+				<title>Installation</title>
+				<description>&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;If you dont’t have your own blog you can clone this repository and put your articles in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder.&lt;br /&gt;
+If you already have your own blog then I think you can clone this repository and copy-paste content keeping your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;After you will have to set up your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;The content of this theme is distributed and licensed under a &lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/legalcode&quot;&gt;Creative Commons Attribution 4.0 License&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This license lets others distribute, remix, tweak, and build upon your work,&lt;br /&gt;
+even commercially, as long as they credit you for the original creation. This&lt;br /&gt;
+is the most accommodating of licenses offered. Recommended for maximum&lt;br /&gt;
+dissemination and use of licensed materials.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In other words: you can do anything you want with this theme on any site, just please&lt;br /&gt;
+provide a link to the original theme on github.&lt;/p&gt;
+
+&lt;p&gt;This theme includes the following files which are the properties of their&lt;br /&gt;
+respective owners:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;js/bootstrap.min.js - &lt;a href=&quot;http://getbootstrap.com&quot;&gt;bootstrap&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;css/bootstrap.min.css - &lt;a href=&quot;http://getbootstrap.com&quot;&gt;bootstrap&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;js/jquery.min.js - &lt;a href=&quot;https://jquery.com&quot;&gt;jquery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Mon, 02 Nov 2015 00:25:06 +0800</pubDate>
+				<link>/2015/11/installation/</link>
+				<guid isPermaLink="true">/2015/11/installation/</guid>
+			</item>
+		
+	</channel>
+</rss>

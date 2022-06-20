@@ -1,82 +1,446 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Dongle的博客 | 互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Dongle的博客" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞" />
-<meta property="og:description" content="互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="Dongle的博客" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Dongle的博客" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞","headline":"Dongle的博客","name":"Dongle的博客","url":"http://localhost:4000/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dongle的博客" /></head>
-<body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Dongle的博客</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Jun 20, 2022</span>
-        <h3>
-          <a class="post-link" href="/jekyll/update/2022/06/20/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-          </a>
-        </h3></li><li><span class="post-meta">Jun 20, 2022</span>
-        <h3>
-          <a class="post-link" href="/jekyll/2022/06/20/firstpage.html">
-            关于个人的一些说明
-          </a>
-        </h3></li></ul>
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
 
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
 
-  <div class="wrapper">
 
-    <h2 class="footer-heading">Dongle的博客</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Dongle的博客</li></ul>
-      </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/idongle"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">idongle</span></a></li><li><a href="https://www.twitter.com/no+twitter"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">no twitter</span></a></li></ul>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dongle的博客</title>
+    <meta name="theme-color" content="#222222"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap4.min.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/css/svg-with-js/js/fontawesome-all.js"></script>
+    <link href="/assets/css/bootstrap4.min.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+ </head>
+
+<body>
+
+
+
+
+
+
+<script type="text/javascript">
+    WebFontConfig = {
+        google: {
+            families: ['Ubuntu::latin']
+        }
+    };
+    (function () {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Dongle的博客</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">/home</a>
+                <a class="nav-item nav-link" href="/archive">/archive</a>
+                <a class="nav-item nav-link" href="/tags">/tags</a>
+                <a class="nav-item nav-link" href="/about">/about</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="wrapper">
+      <div class="content">
+        <div class="container container-center">
+          <div class="row">
+            <div class="col-md-8 offset-md-1">
+              <div class="card">
+                
+<h2 class="post-title">
+    <a href="/2018/08/table-of-content/">
+        Table of content
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2018-08-03'>03 Aug 2018</time>
+    </div>
+    <ul>
+        
+    </ul>
 </div>
 
-      <div class="footer-col footer-col-3">
-        <p>互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞</p>
-      </div>
+<div class="post-descr">
+    <p>
+        For some big articles you can use table on content
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2018/02/table-styles/">
+        Table styles
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2018-02-09'>09 Feb 2018</time>
     </div>
+    <ul>
+        
+    </ul>
+</div>
 
-  </div>
+<div class="post-descr">
+    <p>
+        Examples of different table styles
+    </p>
+</div>
 
-</footer>
-</body>
+<h2 class="post-title">
+    <a href="/2016/12/jekyll-clean-theme/">
+        Jekyll Dark Clean Theme
+    </a>
+</h2>
 
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-12-02'>02 Dec 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/jekyll">jekyll</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Here I want to introduce you the dark theme for Jekyll.
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2016/11/text-formatting/">
+        Text formatting
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-11-03'>03 Nov 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/jekyll">jekyll</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Text formatting examples.
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2016/10/code-syntax-highlighting/">
+        Code snippets
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-10-02'>02 Oct 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/code">code</a></li>
+        
+        <li><a href="/tag/jekyll">jekyll</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Sample post showing how code samples would look like
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2016/09/customizations/">
+        Customizations
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-09-21'>21 Sep 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/customizations">customizations</a></li>
+        
+        <li><a href="/tag/jekyll">jekyll</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Few customizations available out of the box!
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2016/09/be-social/">
+        Be social
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-09-16'>16 Sep 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/tags">tags</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Built-in share buttons!
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2016/08/analytics-tags-comments/">
+        Analytics, tags and comments
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-08-02'>02 Aug 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/jekyll">jekyll</a></li>
+        
+        <li><a href="/tag/analytics">analytics</a></li>
+        
+        <li><a href="/tag/tags">tags</a></li>
+        
+        <li><a href="/tag/comments">comments</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Here you'll find how to setup analytics, tags and comments for your blog
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2016/07/images/">
+        Images
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2016-07-02'>02 Jul 2016</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/images">images</a></li>
+        
+        <li><a href="/tag/jekyll">jekyll</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Sample post showing how to use images
+    </p>
+</div>
+
+<h2 class="post-title">
+    <a href="/2015/11/installation/">
+        Installation
+    </a>
+</h2>
+
+<div class="post-meta">
+    <div class="post-time">
+        <i class="fa fa-calendar-alt"></i>
+        <time datetime='2015-11-02'>02 Nov 2015</time>
+    </div>
+    <ul>
+        
+        <li><a href="/tag/installation">installation</a></li>
+        
+    </ul>
+</div>
+
+<div class="post-descr">
+    <p>
+        Here you'll find out how to install this theme
+    </p>
+</div>
+
+
+
+<div class="post-footer">
+    <div class="column-full">
+        <h3><a href="/archive">Blog archive</a></h3>
+    </div>
+</div>
+
+              </div>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <div class="sidebar ">
+  <h2>Recent Posts</h2>
+  <ul>
+    
+    <li><a href="/2018/08/table-of-content/">Table of content</a></li>
+    
+    <li><a href="/2018/02/table-styles/">Table styles</a></li>
+    
+    <li><a href="/2016/12/jekyll-clean-theme/">Jekyll Dark Clean Theme</a></li>
+    
+    <li><a href="/2016/11/text-formatting/">Text formatting</a></li>
+    
+    <li><a href="/2016/10/code-syntax-highlighting/">Code snippets</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h2>Tags</h2>
+  <ul class="fa-ul">
+    
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/analytics" data-toggle="tooltip" data-placement="right" title="1">
+        <span>analytics</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/code" data-toggle="tooltip" data-placement="right" title="1">
+        <span>code</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/comments" data-toggle="tooltip" data-placement="right" title="1">
+        <span>comments</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/customizations" data-toggle="tooltip" data-placement="right" title="1">
+        <span>customizations</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/images" data-toggle="tooltip" data-placement="right" title="1">
+        <span>images</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/installation" data-toggle="tooltip" data-placement="right" title="1">
+        <span>installation</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/jekyll" data-toggle="tooltip" data-placement="right" title="6">
+        <span>jekyll</span></a></li>
+    
+    <li><span class="fa-li"><i class="fas fa-tag"></i></span>
+            <a href="/tag/tags" data-toggle="tooltip" data-placement="right" title="2">
+        <span>tags</span></a></li>
+    
+  </ul>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+          <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer">
+          <p>Pavel Makhov &copy; 2022-</p>
+          <h6>Follow me</h6>
+
+<ul class="social-media">
+
+  
+    <li>
+      <a title="idongle on Github" href="https://github.com/idongle" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+    </li>
+  
+
+  
+    <li>
+      <a title=" on StackOverflow" href="https://stackoverflow.com/users/" target="_blank"><i class="fab fa-stack-overflow fa-2x"></i></a>
+    </li>
+  
+
+  
+
+  
+    <li>
+      <a title=" on Instagram" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    </li>
+  
+
+  
+    <li>
+      <a title=" on Last.fm" href="https://www.lastfm.com/user/" target="_blank"><i class="fab fa-lastfm fa-2x"></i></a>
+    </li>
+  
+
+  
+    <li>
+      <a title="feed.xml RSS" href="/feed.xml" target="_blank"><i class="fas fa-rss fa-2x"></i></a>
+    </li>
+  
+
+</ul>
+
+        </div>
+      </div>
+    </footer>
+
+    </div>
+  </body>
 </html>
