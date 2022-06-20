@@ -8,6 +8,34 @@
 		
 			<item>
 				<title>关于个人的一些说明</title>
+				<description>&lt;h2 id=&quot;static-canaries&quot;&gt;Static Canaries&lt;/h2&gt;
+&lt;p&gt;  Static Canaries是用于对抗栈溢出攻击的技术，即SSP安全机制，有时也叫做Stack cookies。&amp;lt;p&amp;gt;&lt;br /&gt;
+  Canary的值是栈上的一个随机数，在程序启动时随机生成并保存在比返回地址更低的位置。由于栈溢出是从低地址向高地址覆盖，因此，攻击者在进行栈攻击时，一定会先覆盖掉Canary，所以通过检查该值可检查栈是否被篡改。&lt;/p&gt;
+
+&lt;h2 id=&quot;linux开启关闭canaries保护&quot;&gt;Linux开启/关闭Canaries保护&lt;/h2&gt;
+&lt;p&gt;gcc -fstack-protector canary.c -o f.out &lt;span style=&quot;text-align:right&quot;&gt;#开启&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+gcc -fno-stack-protector canary.c -o f.out    #关闭
+
+## 例子
+```
+#include &lt;stdio.h&gt;
+int main()
+{
+  char buf[10];
+  scanf(&quot;%s&quot;,buf);
+  return 0;
+}
+```
+&lt;/stdio.h&gt;&lt;/p&gt;
+</description>
+				<pubDate>Mon, 20 Jun 2022 08:30:00 +0800</pubDate>
+				<link>/2022/06/pwn_Canaries%E5%AD%A6%E4%B9%A0/</link>
+				<guid isPermaLink="true">/2022/06/pwn_Canaries%E5%AD%A6%E4%B9%A0/</guid>
+			</item>
+		
+			<item>
+				<title>关于个人的一些说明</title>
 				<description>&lt;h3 id=&quot;1-关于个人&quot;&gt;1 关于个人&lt;/h3&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;双非一本的非科班学生
 
