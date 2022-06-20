@@ -21,7 +21,7 @@
 title: Dongle的博客
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现影响较大的二进制漏洞
+  互联网安全小厂一个默默无闻的安服崽，致力于挖掘发现二进制漏洞
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: no twitter
