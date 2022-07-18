@@ -7,27 +7,397 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>关于个人的一些说明</title>
-				<description>&lt;h2 id=&quot;static-canaries&quot;&gt;Static Canaries&lt;/h2&gt;
-&lt;p&gt;  Static Canaries是用于对抗栈溢出攻击的技术，即SSP安全机制，有时也叫做Stack cookies。&amp;lt;p&amp;gt;&lt;br /&gt;
-  Canary的值是栈上的一个随机数，在程序启动时随机生成并保存在比返回地址更低的位置。由于栈溢出是从低地址向高地址覆盖，因此，攻击者在进行栈攻击时，一定会先覆盖掉Canary，所以通过检查该值可检查栈是否被篡改。&lt;/p&gt;
+				<title>常见的二进制漏洞(二)-格式化字符串漏洞</title>
+				<description>&lt;h2 id=&quot;格式化输出函数说明&quot;&gt;格式化输出函数说明&lt;/h2&gt;
 
-&lt;h2 id=&quot;linux开启关闭canaries保护&quot;&gt;Linux开启/关闭Canaries保护&lt;/h2&gt;
-&lt;p&gt;gcc -fstack-protector canary.c -o f.out &lt;span style=&quot;text-align:right&quot;&gt;#开启&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-gcc -fno-stack-protector canary.c -o f.out    #关闭
+&lt;p&gt;格式化字符串漏洞经常发生在printf等函数里&lt;br /&gt;
+printf是一个变参函数，其中包含一个强制参数格式字符串和可选参数。&lt;/p&gt;
 
-## 例子
-```
-#include &lt;stdio.h&gt;
+&lt;p&gt;printf示例&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;常规printf
+printf(&quot;Hello %%&quot;);             //&quot;Hello %&quot;
+printf(&quot;Hello world!&quot;)          //&quot;Hello world!&quot;
+printf(&quot;Number:%d&quot;, 123)        //&quot;Number:123&quot;
+printf(&quot;%s %s&quot;, &quot;Format&quot;, &quot;Strings&quot;);   //&quot;Format Strings&quot;
+printf(&quot;%12c&quot;, &apos;A&apos;);            //&quot;           A&quot;
+printf(&quot;%16s&quot;, &quot;Hello&quot;);        //&quot;             Hello&quot;
+
+赋值printf
+int n;
+printf(&quot;%12c%n&quot;, &apos;A&apos;, &amp;amp;n);      //n = 12
+printf(&quot;%16s%n&quot;, &quot;Hello&quot;);      //n = 16
+
+变参数位置printf
+printf(&quot;%2$s %1$s&quot;, &quot;Format&quot;, &quot;Strings&quot;);   //&quot;Strings Format&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;格式化字符串漏洞&quot;&gt;格式化字符串漏洞&lt;/h2&gt;
+&lt;p&gt;格式化字符串从防御手段分为两类，一种是检查参数个数，另一类则是安全机制FORTIFY_SOURCE对格式化字符串函数进行检查。&lt;/p&gt;
+&lt;h3 id=&quot;格式化字符串原理&quot;&gt;格式化字符串原理&lt;/h3&gt;
+&lt;p&gt;根据调用约定，printf的格式字符串会依次读取栈的内容，当格式字符串的值多于可选参数时，就会对栈的内容进行读取，从而造成信息泄露。&lt;br /&gt;
+简单示例&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+int main()
+{
+    printf(&quot;%s-%d-%x-%x&quot;, &quot;Hello&quot;, 123)
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;通过OD调试，可以看出，%x在没有参数的情况下会将栈的内容输出&lt;br /&gt;
+&lt;img src=&quot;/assets/img/2.png&quot; alt=&quot;OD调试&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;漏洞利用&quot;&gt;漏洞利用&lt;/h3&gt;
+
+&lt;p&gt;对于格式化字符串的漏洞利用主要有:程序崩溃、栈数据泄露、任意地址内存泄漏、栈数据覆盖、任意地址内存覆盖。&lt;/p&gt;
+
+&lt;h4 id=&quot;使程序崩溃&quot;&gt;使程序崩溃&lt;/h4&gt;
+
+&lt;p&gt;能够触发程序崩溃的格式化字符串有以下三种类型&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;对于每一个%s,printf都要从栈中获取地址，并打印该地址所指向的内存，当出现空字符使会导致程序崩溃&lt;/li&gt;
+  &lt;li&gt;从栈中获取的地址是非法的&lt;/li&gt;
+  &lt;li&gt;从栈中获取的地址是被保护的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;栈数据泄露&quot;&gt;栈数据泄露&lt;/h4&gt;
+
+&lt;p&gt;通过格式化字符串 &lt;strong&gt;%08x&lt;/strong&gt; 或者 &lt;strong&gt;%p&lt;/strong&gt; 可获取栈内对应的地址，当格式化字符串多的时候就可以去获取栈内其他地址，一般为ebp和rop的值&lt;/p&gt;
+
+&lt;h4 id=&quot;任意地址内存泄漏&quot;&gt;任意地址内存泄漏&lt;/h4&gt;
+
+&lt;p&gt;当格式化字符串可以由自己控制时，便可以输入”%n$s”,此时使argn的位置为%s的地址，便可以对该地址进行任意位置的读操作。&lt;/p&gt;
+
+&lt;h4 id=&quot;栈数据覆盖&quot;&gt;栈数据覆盖&lt;/h4&gt;
+
+</description>
+				<pubDate>Fri, 24 Jun 2022 15:55:00 +0800</pubDate>
+				<link>/2022/06/stringFormat/</link>
+				<guid isPermaLink="true">/2022/06/stringFormat/</guid>
+			</item>
+		
+			<item>
+				<title>常见的二进制漏洞(一)-整数溢出</title>
+				<description>&lt;h2 id=&quot;整数的范围&quot;&gt;整数的范围&lt;/h2&gt;
+&lt;h4 id=&quot;32位&quot;&gt;32位&lt;/h4&gt;
+&lt;p&gt;| 数据类型                   | 最小值      | 最大值     |&lt;br /&gt;
+| ————————– | ———– | ———- |&lt;br /&gt;
+| int(32bit 默认为signed)    | -2147483648 | 2147483647 |&lt;br /&gt;
+| unsigned int               | 0           | 4294967295 |&lt;br /&gt;
+| short (16bit 默认为signed) | -32768      | 32767      |&lt;br /&gt;
+| unsigned short             | 0           | 65535      |&lt;br /&gt;
+| long(32bit 默认为signed)   | -2147483648 | 2147483647 |&lt;br /&gt;
+| unsigned long              | 0           | 4294967295 |&lt;/p&gt;
+
+&lt;h4 id=&quot;64位&quot;&gt;64位&lt;/h4&gt;
+&lt;p&gt;64位数据与32位数据大致相同，只有long和unsigned long和32位不同&lt;br /&gt;
+| 数据类型                 | 最小值               | 最大值               |&lt;br /&gt;
+| ———————— | ——————– | ——————– |&lt;br /&gt;
+| long(64bit 默认为signed) | -9223372036854775808 | 9223372036854775807  |&lt;br /&gt;
+| unsigned long            | 0                    | 18446744073709551615 |&lt;/p&gt;
+
+&lt;h2 id=&quot;整数异常的类型&quot;&gt;整数异常的类型&lt;/h2&gt;
+&lt;p&gt;整数的异常通常分为三种，溢出，回绕和截断&lt;/p&gt;
+
+&lt;h3 id=&quot;溢出&quot;&gt;溢出&lt;/h3&gt;
+&lt;p&gt;溢出经常发正在有符号数相加或相减的时候，有符号数最高位为符号位，在进行运算时有可能改变符号位的值，产生溢出，影响OF标志位。&lt;br /&gt;
+  溢出分为上溢出和下溢出两种&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  int i = INT_MAX(2147483647);
+  i = i + 1;        //上溢出
+  printf(&quot;i = %d&quot;, i);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;最终产生的结果为-2147483648&lt;br /&gt;
+  从二进制分析如下&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   0111 1111 1111 1111 1111 1111 1111 1111
+  +                                   0001
+-------------------------------------------
+   1000 0000 0000 0000 0000 0000 0000 0000(-2147483648)
+   (7FFF FFFF + 0000 0001 = 8000 0000)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;下溢出分析&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  int i = INT_MIN(-2147483648);
+  i = i - 1;        //下溢出
+  printf(&quot;i = %d&quot;, i);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;最终产生的结果为2147483647&lt;br /&gt;
+  从二进制分析如下&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    1000 0000 0000 0000 0000 0000 0000 0000
+  -                                    0001
+--------------------------------------------     
+    0111 1111 1111 1111 1111 1111 1111 1111(2147483647)
+    (8000 0000 - 0000 0001 = 7FFF FFFF)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;回绕&quot;&gt;回绕&lt;/h3&gt;
+&lt;p&gt;回绕发生在无符号数相加或相减的时候，当最大值满足不了位数时，就会产生进位回绕行为，影响CF标志位。&lt;br /&gt;
+  回绕也分为两种情况&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  int i = INT_MAX(4294967295);
+  i = i + 1;        //超出最大值，产生回绕，结果为0
+  i = INT_MIN(0);
+  i = i - 1;        //超过最小值，产生回绕，结果为4294967295;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;从二进制分析如下&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     1111 1111 1111 1111 1111 1111 1111 1111
+  +                                     0001
+--------------------------------------------
+ (1)0000 0000 0000 0000 00000 0000 0000 0000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; (1)0000 0000 0000 0000 0000 0000 0000 0000
+  -                                    0001
+--------------------------------------------
+ (0)1111 1111 1111 1111 1111 1111 1111 1111
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;截断&quot;&gt;截断&lt;/h3&gt;
+&lt;p&gt;截断常发生在不是同一种类型的数据进行运算时，将宽度较大的数强制转换为宽度较小的数，从而在高位发生截断。&lt;br /&gt;
+例子如下&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0xffffffff + 0x00000001
+= 0x0000000100000000(long long)
+= 0x00000000(long,截取低32位)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0x00123456 * 0x00654321
+= 0x000007336BF94116(long long)
+= 0x6BF94116(long,截取低32位)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;整形溢出漏洞发生位置&quot;&gt;整形溢出漏洞发生位置&lt;/h2&gt;
+&lt;p&gt;整形溢出多发生于size_t作为参数的函数中&lt;br /&gt;
+size_t是&lt;strong&gt;无符号整数&lt;/strong&gt;类型的sizeof()的结果&lt;br /&gt;
+void memcpy(void *dest, const void *src, size_t n);&lt;br /&gt;
+char *strncpy(char *dest, const char *src, size_t n);&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;情形一&lt;br /&gt;
+当攻击者给长度赋值为负数时，sizeof()函数会将该值变为非常大的正数常量，从而可以复制大量的内容，造成缓冲区溢出。
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;len = -1
+sizeof(len) = 4294967295;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;情形二&lt;br /&gt;
+当有字符需求限制时，可以将长度设为非常大的值，在进行运算时，会发生回绕，从而使其符合字符需求限制，从而绕过检测，造成缓冲区溢出。
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;len = 0xffffffff
+len + 5 = 0x00000004
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h2 id=&quot;案例&quot;&gt;案例&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;string.h&amp;gt;
+
+int main()
+{
+    char passwd_buf[11];
+    unsigned char passwd_len = strlen(argv[1]);
+    if(passwd_len &amp;gt;= 4 &amp;amp;&amp;amp; passwd_len &amp;lt;= 8)
+    {
+        printf(&quot;Good Job&quot;);
+        strcpy(passwd_buf, argv[1]);
+    }
+    else
+    {
+        printf(&quot;Wrong&quot;);
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;可以看到passwd_len变量为unsigned char类型，该类型作为数值时的范围为1BYTE,取值范围为0-255，当长度大于该值时就会产生溢出，利用这点可以绕过passwd_len大于4小于8的限制&lt;/p&gt;
+
+&lt;p&gt;内存变量堆栈如图所示&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-0000000000000020 ;
+-0000000000000020
+-0000000000000020 var_20          dq ?
+-0000000000000018                 db ? ; undefined
+-0000000000000017                 db ? ; undefined
+-0000000000000016                 db ? ; undefined
+-0000000000000015                 db ? ; undefined
+-0000000000000014 var_14          dd ?
+-0000000000000010                 db ? ; undefined
+-000000000000000F                 db ? ; undefined
+-000000000000000E                 db ? ; undefined
+-000000000000000D                 db ? ; undefined
+-000000000000000C dest            db 11 dup(?)
+-0000000000000001 var_1           db ?
++0000000000000000  s              db 8 dup(?)
++0000000000000008  r              db 8 dup(?)
++0000000000000010
++0000000000000010 ; end of stack variables
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;其中var_1为passwd_len值&lt;br /&gt;
+可以看出来溢出几个字节很容易覆盖原来ret变量的值&lt;br /&gt;
+&lt;img src=&quot;/assets/img/1.png&quot; alt=&quot;例子图片&quot; /&gt;&lt;br /&gt;
+从而达到缓冲区溢出，修改EIP的目的&lt;/p&gt;
+</description>
+				<pubDate>Fri, 24 Jun 2022 08:30:00 +0800</pubDate>
+				<link>/2022/06/intoverflow/</link>
+				<guid isPermaLink="true">/2022/06/intoverflow/</guid>
+			</item>
+		
+			<item>
+				<title>Linux安全机制说明</title>
+				<description>&lt;h1 id=&quot;linux安全机制&quot;&gt;Linux安全机制&lt;/h1&gt;
+&lt;p&gt;通过checksec命令可查看文件的保护类型&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;checksec –file=f.out&lt;br /&gt;
+安全机制大概分为5种&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;RELRO&lt;/th&gt;
+      &lt;th&gt;STACK CANARY&lt;/th&gt;
+      &lt;th&gt;NX&lt;/th&gt;
+      &lt;th&gt;PIE&lt;/th&gt;
+      &lt;th&gt;FORTIFY&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Partial RELRO&lt;/td&gt;
+      &lt;td&gt;Canary found&lt;/td&gt;
+      &lt;td&gt;NX enable&lt;/td&gt;
+      &lt;td&gt;PIE enabled&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;static-canaries&quot;&gt;Static Canaries&lt;/h2&gt;
+&lt;p&gt;    Static Canaries是用于对抗栈溢出攻击的技术，即SSP安全机制，有时也叫做Stack cookies。&amp;lt;p&amp;gt;&lt;br /&gt;
+    Canary的值是栈上的一个随机数，在程序启动时随机生成并保存在比返回地址更低的位置。由于栈溢出是从低地址向高地址覆盖，因此，攻击者在进行栈攻击时，一定会先覆盖掉Canary，所以通过检查该值可检查栈是否被篡改。&lt;/p&gt;
+
+&lt;h3 id=&quot;开启关闭canaries保护&quot;&gt;开启/关闭Canaries保护&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcc -fstack-protector canary.c -o f.out        #开启
+gcc -fno-stack-protector canary.c -o fn.out    #关闭
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;例子&quot;&gt;例子&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
 int main()
 {
   char buf[10];
   scanf(&quot;%s&quot;,buf);
   return 0;
 }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;可以看到被canary保护的程序在溢出后无法正常执行程序&lt;/p&gt;
+&lt;p&gt;
 ```
-&lt;/stdio.h&gt;&lt;/p&gt;
+
+└─# ./f.out 
+11111111111111111111111111111111111111111111
+*** stack smashing detected ***: terminated
+zsh: IOT instruction  ./f.out
+
+```
+没被保护的程序则出现了栈溢出报错
+```
+└─# ./fn.out 
+11111111111111111111111111111111
+zsh: segmentation fault  ./fn.out
+```
+
+通过gdb查看有canary的反汇编情况
+```
+(gdb) disassemble
+Dump of assembler code for function main:
+   0x0000555555555149 &amp;lt;+0&amp;gt;:     push   %rbp
+   0x000055555555514a &amp;lt;+1&amp;gt;:     mov    %rsp,%rbp
+   0x000055555555514d &amp;lt;+4&amp;gt;:     sub    $0x20,%rsp
+=&amp;gt; 0x0000555555555151 &amp;lt;+8&amp;gt;:     mov    %fs:0x28,%rax
+   0x000055555555515a &amp;lt;+17&amp;gt;:    mov    %rax,-0x8(%rbp)
+   0x000055555555515e &amp;lt;+21&amp;gt;:    xor    %eax,%eax
+   0x0000555555555160 &amp;lt;+23&amp;gt;:    lea    -0x12(%rbp),%rax
+   0x0000555555555164 &amp;lt;+27&amp;gt;:    mov    %rax,%rsi
+   0x0000555555555167 &amp;lt;+30&amp;gt;:    lea    0xe96(%rip),%rax        # 0x555555556004
+   0x000055555555516e &amp;lt;+37&amp;gt;:    mov    %rax,%rdi
+   0x0000555555555171 &amp;lt;+40&amp;gt;:    mov    $0x0,%eax
+   0x0000555555555176 &amp;lt;+45&amp;gt;:    call   0x555555555040 &amp;lt;__isoc99_scanf@plt&amp;gt;
+   0x000055555555517b &amp;lt;+50&amp;gt;:    mov    $0x0,%eax
+   0x0000555555555180 &amp;lt;+55&amp;gt;:    mov    -0x8(%rbp),%rdx
+   0x0000555555555184 &amp;lt;+59&amp;gt;:    sub    %fs:0x28,%rdx
+   0x000055555555518d &amp;lt;+68&amp;gt;:    je     0x555555555194 &amp;lt;main+75&amp;gt;
+   0x000055555555518f &amp;lt;+70&amp;gt;:    call   0x555555555030 &amp;lt;__stack_chk_fail@plt&amp;gt;
+   0x0000555555555194 &amp;lt;+75&amp;gt;:    leave  
+   0x0000555555555195 &amp;lt;+76&amp;gt;:    ret
+End of assembler dump.
+```
+
+
+查看没有canary保护的程序
+```
+(gdb) disassemble 
+Dump of assembler code for function main:
+   0x0000555555555139 &amp;lt;+0&amp;gt;:     push   %rbp
+   0x000055555555513a &amp;lt;+1&amp;gt;:     mov    %rsp,%rbp
+=&amp;gt; 0x000055555555513d &amp;lt;+4&amp;gt;:     sub    $0x10,%rsp
+   0x0000555555555141 &amp;lt;+8&amp;gt;:     lea    -0xa(%rbp),%rax
+   0x0000555555555145 &amp;lt;+12&amp;gt;:    mov    %rax,%rsi
+   0x0000555555555148 &amp;lt;+15&amp;gt;:    lea    0xeb5(%rip),%rax        # 0x555555556004
+   0x000055555555514f &amp;lt;+22&amp;gt;:    mov    %rax,%rdi
+   0x0000555555555152 &amp;lt;+25&amp;gt;:    mov    $0x0,%eax
+   0x0000555555555157 &amp;lt;+30&amp;gt;:    call   0x555555555030 &amp;lt;__isoc99_scanf@plt&amp;gt;
+   0x000055555555515c &amp;lt;+35&amp;gt;:    mov    $0x0,%eax
+   0x0000555555555161 &amp;lt;+40&amp;gt;:    leave  
+   0x0000555555555162 &amp;lt;+41&amp;gt;:    ret    
+End of assembler dump.
+```
+
+可以看出区别仅在于在栈位置rbp-8的地方添加了一个fs:[0x28]的值，该值为系统TCB(线程控制块)结构体里的一个字段。其内容根据需求为随机值。
+
+## No-eXecute
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;No-eXecute(NX)，表示不可执行。其原理是将数据所在的内存页(比如栈，堆，.data区)标识为不可执行，如果程序产生溢出转入执行shellcode时，cpu就会抛出异常。在windows上被成为DEP(数据执行保护)。
+
+### 开启/关闭NX
+
+```
+gcc -z noexecstack hello.c        #开启
+gcc -z execstack hello.c          #禁用
+```
+### 例子
+```
+#include &lt;unistd.h&gt;
+
+void vlu_fun()
+{
+  char buf[128];
+  read(STDIN_FILEND, buf, 256);
+}
+int main()
+{
+  vlu_fun();
+  write(STDOUT_FILENO, &quot;Hello world!\n&quot;, 13);
+  return 0;
+}
+```
+
+## ASLR和PIE
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ASLR(Address Space Layout Randomization,地址空间布局随机化)是将内存布局随机化。攻击者在攻击程序时，往往知道内存布局，从而可以知道shellcode和其他代码的位置，在此基础上，将地址随机化可以将漏洞利用的难度提高。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Linux系统中，ASLR的配置在/proc/sys/kernel/randomize_va_space中，其中0表示关闭ASLR，1表示部分开启，2表示完全开启。
+&lt;p&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ASLR是系统层面的地址随机，其中随机话的有Executable,PLT,Heap,Stack和Shared Library。在此基础上，攻击者任然可以通过ret2plt,GOT劫持，爆破手段来绕过。PIE(Position-Independebt Executable)技术的出现是将程序内部引入无关的可执行代码，使程序加载到任意位置。将ASLR和PIE技术相结合，就可以使攻击者对内存布局一无所知。
+
+### 开启/关闭ASLR/PIE
+
+开启/关闭ASLR只需在/proc/sys/kernel/randomize_va_space中修改数值即可
+&lt;p&gt;
+开启/关闭PIE
+```
+gcc -pie -fno-pie test.c        #开启
+gcc -no-pie test.c              #关闭
+```
+
+## FORTIFY_SOURCE
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;缓冲区溢出经常发生在危险函数的地方，FORTIFY_SOURCE的出现就是为了检查危险函数，在编译时确定危险是否存在，或者将函数替换为比较安全的函数，从而降低缓冲区溢出风险的发生。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;检查的函数例如memcpy, mempcpy, memmove, memset, strcpy, stpcpy, strncpy, strcat, strncat, sprintf, vsprintf, snprintf, vsnprintf, gets等，目的是检查dest变量内存是否溢出
+
+### 开启/关闭FORTIFY_SOURCE
+默认情况下，在某些系统上该机制时关闭的。开启需要在编译时手动指定等级。
+```
+-D_FORIFY_SOURCE=1,开启缓冲区溢出攻击检查
+-D_FORITY_SOURCE=2,开启缓冲区溢出攻击检查和格式化字符串攻击检查
+```
+
+
+## RELRD
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;该安全机制的出现是为了解决Linux程序延迟绑定的问题。
+&lt;/p&gt;&lt;/p&gt;&lt;/unistd.h&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 20 Jun 2022 08:30:00 +0800</pubDate>
 				<link>/2022/06/pwn_Canaries%E5%AD%A6%E4%B9%A0/</link>
